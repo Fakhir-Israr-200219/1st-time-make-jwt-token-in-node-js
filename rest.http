@@ -1,0 +1,31 @@
+GET http://localhost:3000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MTc1NjY1OTIsImV4cCI6MTcxNzU2NjYwNywiYXVkIjoiNjY1ZmYyNzQ5ZmQxNzdkNzlkZjdkMjhlIiwiaXNzIjoicGlja3VyUGFoZS5jb20ifQ.l4WNh5gVsn1HeVVtBEZlrycPJYlHN680b6_rGg2Uc0w
+###
+GET http://localhost:3000/xyz
+
+
+
+### Auth route start here 
+
+### register
+POST  http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "email":"jwt@61.com",
+    "password":"new_password_1"
+}
+
+### login
+POST  http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "email":"jwt@61.com",
+    "password":"new_password_1"
+}
+### refresh token
+POST  http://localhost:3000/auth/refresh-token
+
+### logout
+DELETE http://localhost:3000/auth/logout
