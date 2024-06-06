@@ -68,5 +68,14 @@ module.exports = {
                 resolve(token);
             })
         })
+    },
+    varifyRefreshToken:(refreshToken) => {
+        return new Promise((resolve,reject) => {
+            JWT.verify(refreshToken,process.env.REFRESH_TOKEN_SECRET,(err,payLoad)=>{
+                if(err) return reject(createError.Unauthorized());
+                const userId = payLoad.aud
+                resolve(userId)
+            });
+        })
     }
 }

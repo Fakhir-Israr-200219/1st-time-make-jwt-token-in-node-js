@@ -12,7 +12,7 @@ POST  http://localhost:3000/auth/register
 Content-Type: application/json
 
 {
-    "email":"jwt@61.com",
+    "email":"jwt@64.com",
     "password":"new_password_1"
 }
 
@@ -21,11 +21,16 @@ POST  http://localhost:3000/auth/login
 Content-Type: application/json
 
 {
-    "email":"jwt@61.com",
+    "email":"jwt@64.com",
     "password":"new_password_1"
 }
 ### refresh token
 POST  http://localhost:3000/auth/refresh-token
+Content-Type: application/json
+
+{
+    "refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MTc2NTgwNTksImV4cCI6MTc0OTIxNTY1OSwiYXVkIjoiNjY2MTYxY2JhMTExOGIzODk2NmRkYTg3IiwiaXNzIjoicGlja3VyUGFoZS5jb20ifQ.7TQuo3q2RO1V3n93X8e2blW6Kg6b5tc5V0Z7X7Ig-FI"
+}
 
 ### logout
 DELETE http://localhost:3000/auth/logout
